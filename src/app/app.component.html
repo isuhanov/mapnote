@@ -7,3 +7,8 @@
 ></app-card>
 
 <p appAttribute [value]="{ id: 'test' }">Синтаксис атрибутной директивы</p>
+
+<p>{{ 24637423.123 | currency:'ru-RU' }}</p> <!-- Результат: '24 637 423,123' -->
+<p>{{ 24637423.123 | currency:'en-US' }}</p> <!-- Результат: '24,637,423.123' -->
+
+<output id="timer-output"></output>
