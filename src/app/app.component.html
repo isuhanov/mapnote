@@ -12,3 +12,35 @@
 <p>{{ 24637423.123 | currency:'en-US' }}</p> <!-- Результат: '24,637,423.123' -->
 
 <output id="timer-output"></output>
+
+
+<form [formGroup]="productFormGroup">
+  <div class="field">
+    <label for="prodId">ID</label>
+    <input type="text" id="prodId" formControlName="id">
+    <button type="button" (click)="setId()">Сгенерировать ID</button>
+  </div>
+  
+  <div class="field">
+    <label for="name">Название</label>
+    <input type="text" id="name" formControlName="name">
+  </div>
+
+  <div class="field">
+    <label for="price">Цена</label>
+    <input type="number" id="price" formControlName="price">
+  </div>
+  
+  <div class="field select">
+    <label for="categories">Категории</label>
+    <select name="categories" multiple formControlName="categories">
+      <option value="clothes">Одежда</option>
+      <option value="shoes">Обувь</option>
+      <option value="medicines">Лекарства</option>
+      <option value="food">Еда</option>
+      <option value="electronics">Электроника</option>
+    </select>
+  </div>
+
+  <button type="button" (click)="onSubmit()">Отправить</button>
+</form>

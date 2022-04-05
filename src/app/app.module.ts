@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent, DOCUMENT, SET_INTERVAL_FUNC } from './app.component';
 import { CardComponent } from './card/card.component';
@@ -16,7 +17,8 @@ import { TimerService } from './timer.service';
     CurrencyPipe,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ReactiveFormsModule
   ],
   providers: [
     TimerService,
